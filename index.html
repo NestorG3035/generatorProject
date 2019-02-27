@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>jQuery template</title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-     <script>// my own jQueryjavascript
-      $(function(){
-          
-      });fbSF
-  </script>
-  <style>
-      
-  </style>
-  </head>
-  <body>
-  
- 
-  </body>
+    <script>
+        // my own jQueryjavascript
+        $(function() {
+
+        });
+    </script>
+    <style>
+        .identification-card {
+            width: 15%;
+            height: 405px;
+            background-color: white;
+            border-radius: 25px;
+            border: 2px solid black;
+            margin: 20px;
+            bottom: 20%;
+            z-index:-1;
+        }
+        .gap{
+             width: 4%;
+            height: 10px;
+            background-color: white;
+            border-radius: 50px;
+            border: 2px solid black;
+            position:absolute;
+            margin-left: 125px;
+            bottom:95%;
+           
+        }
+        .picture{
+            width: 7%;
+            height:130px;
+           border: 2px solid black;
+            position:absolute;
+            margin: 45px;
+            bottom:75%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="identification-card"></div>
+    <div class="gap"></div>
+    <div class="picture"></div>
+    <p id="name"></p>
+    <p id="D.O.B."></p>
+    <p id="Home Address"></p>
+    Name:<input input type="text" name="Name" value="(Last/First Name)"><br>
+    Date of Birth:<input type=""><input>
+
+</body>
+
 </html>
