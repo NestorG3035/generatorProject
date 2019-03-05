@@ -9,38 +9,95 @@
         // my own jQueryjavascript
         $(function() {
 
-        });
+$('button').click(function(){
+    var name=$('#name').val();
+var dob=$('#birthdate').val();
+var age=$('#age').val();
+var address=$('#address').val();
+var colorUser=$('#color').val();
+var link=$('#link').val();
+  $('.name').html("Name: "+name);
+ 
+  $('.birthdate').html("Birthdate: "+ dob);
+  $('.age').html("Age: "+ age);
+  $('.address').html("Address: "+address);
+  /*$(':image').html(link);*/
+  $('div').css('color',colorUser);
+  
+
+
+
+/*console.log(name);
+console.log(dob);
+console.log(age);
+console.log(address);*/
+
+
+});
+});
+
+
+        
     </script>
     <style>
         .identification-card {
-            width: 15%;
+            width: 300px;
             height: 405px;
             background-color: white;
             border-radius: 25px;
             border: 2px solid black;
             margin: 20px;
             bottom: 20%;
-            z-index:-1;
+            z-index: -1;
         }
-        .gap{
-             width: 4%;
+
+        .gap {
+            width: 50px;
             height: 10px;
             background-color: white;
             border-radius: 50px;
             border: 2px solid black;
-            position:absolute;
-            margin-left: 125px;
-            bottom:95%;
-           
+            position: relative;
+            margin-left: 130px;
+            top: -420px;
+
         }
-        .picture{
-            width: 7%;
-            height:130px;
-           border: 2px solid black;
-            position:absolute;
-            margin: 45px;
-            bottom:75%;
+
+        .picture {
+            width: 100px;
+            height: 130px;
+            border: 2px solid black;
+            position: relative;
+            margin-left: 45px;
+            top: -395px;
         }
+        .name{
+            position:relative;
+            margin-left:155px;
+            top:-530px;
+        }
+        .birthdate{
+            position:relative;
+            margin-left:155px;
+            top:-520px;
+        }
+            
+        .age{
+            position:relative;
+            margin-left:155px;
+            top:-510px;
+        }
+        .address{
+            margin-left:155px;
+            position:relative;
+            top:-500px;
+        }
+        img{
+            position:relative;
+            margin-left:48px;
+            top:-602px;
+        }
+        
     </style>
 </head>
 
@@ -48,12 +105,19 @@
     <div class="identification-card"></div>
     <div class="gap"></div>
     <div class="picture"></div>
-    <p id="name"></p>
-    <p id="D.O.B."></p>
-    <p id="Home Address"></p>
-    Name:<input input type="text" name="Name" value="(Last/First Name)"><br>
-    Date of Birth:<input type=""><input>
-
-</body>
+    <div class = "name"></div><br>
+    <div class= "birthdate"></div><br>
+    <div class ="age"></div><br>
+    <div class="address"></div><br>
+    <img class="img" src="nopfp.png" style= width:100px;height:130px>
+    Name:<input id ='name' type="text" name="Name" value="(Last/First Name)"><br> 
+    Date of Birth:<input id="birthdate" type="date"></input><br>
+    Age:<input id="age" type= "number" min =18 max=150></input></br>
+    Address:<input id="address" type="text"></input><br>
+    /*Photo*/
+    <input id ="link" type= "text" value= "(Insert Link to photo)"></input><br>
+    <input id="color" type ="text" value="(Default color for ID)"></input><br>
+    <button>Generate ID</button>
+  
 
 </html>
