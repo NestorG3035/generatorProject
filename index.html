@@ -16,12 +16,13 @@ var age=$('#age').val();
 var address=$('#address').val();
 var colorUser=$('#color').val();
 var link=$('#link').val();
+/*console.log(link)*/
   $('.name').html("Name: "+name);
  
   $('.birthdate').html("Birthdate: "+ dob);
   $('.age').html("Age: "+ age);
   $('.address').html("Address: "+address);
-  /*$(':image').html(link);*/
+  $('#change-image').html('src',link)
   $('div').css('color',colorUser);
   
 
@@ -93,9 +94,9 @@ console.log(address);*/
             top:-500px;
         }
         img{
-            position:relative;
-            margin-left:48px;
-            top:-602px;
+            position:absolute;
+            margin-left:47px;
+            top:70px;
         }
         
     </style>
@@ -109,7 +110,7 @@ console.log(address);*/
     <div class= "birthdate"></div><br>
     <div class ="age"></div><br>
     <div class="address"></div><br>
-    <img class="img" src="nopfp.png" style= width:100px;height:130px>
+    <img id="change-image"class="img" src="nopfp.png" alt="Blank Picture" style= width:100px;height:130px>
     Name:<input id ='name' type="text" name="Name" value="(Last/First Name)"><br> 
     Date of Birth:<input id="birthdate" type="date"></input><br>
     Age:<input id="age" type= "number" min =18 max=150></input></br>
