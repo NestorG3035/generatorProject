@@ -9,43 +9,41 @@
         // my own jQueryjavascript
         $(function() {
 
-$('button').click(function(){
-/*When generate Button is pressed, all the inputted information is turned into a variable so that it can be called later for future use. */
-    var name=$('#name').val();
-var dob=$('#birthdate').val();
-var age=$('#age').val();
-var address=$('#address').val();
-var colorUser=$('#color').val();
-var link=$('#link').val();
-var backgroundcolor=$('#background-color').val();
-/*console.log(link)*/
-/*All these commands below grab the element we spicify by their ID or Class and add the inputted information right next to it. EX:The name Class gets the variable called name that has the user's name.*/
-  $('.name').html('Name: '+name);
-  $('.birthdate').html('Date of Birth: '+ dob);
-  $('.age').html('Age: '+age);
-  $('.address').html('Address: '+address);
-  $('.change-image').attr('src',link);
-  
-  $('div').css('color',colorUser);
-  $('.identification-card').css('background-color',backgroundcolor)
- 
+            $('button').click(function() {
+                /*When generate Button is pressed, all the inputted information is turned into a variable so that it can be called later for future use. */
+                var name = $('#name').val();
+                var dob = $('#birthdate').val();
+                var age = $('#age').val();
+                var address = $('#address').val();
+                var colorUser = $('#color').val();
+                var link = $('#link').val();
+                var backgroundcolor = $('#background-color').val();
+                /*console.log(link)*/
+                /*All these commands below grab the element we spicify by their ID or Class and add the inputted information right next to it. EX:The name Class gets the variable called name that has the user's name.*/
+                $('.name').html('Name: ' + name);
+                $('.birthdate').html('Date of Birth: ' + dob);
+                $('.age').html('Age: ' + age);
+                $('.address').html('Address: ' + address);
+                $('.change-image').attr('src', link);
+
+                $('div').css('color', colorUser);
+                $('.identification-card').css('background-color', backgroundcolor)
 
 
-/*Debuggin test incase variables didnt store the input*/
-/*console.log(name);
-console.log(dob);
-console.log(age);
-console.log(address);*/
+
+                /*Debuggin test incase variables didnt store the input*/
+                /*console.log(name);
+                console.log(dob);
+                console.log(age);
+                console.log(address);*/
 
 
-});
-});
-
-
-        
+            });
+        });
     </script>
     <style>
-    /*ID square*/
+        /*ID square*/
+
         .identification-card {
             width: 300px;
             height: 405px;
@@ -56,7 +54,9 @@ console.log(address);*/
             bottom: 20%;
             z-index: -1;
         }
-         /*Clip Gap at the top.*/
+
+        /*Clip Gap at the top.*/
+
         .gap {
             width: 50px;
             height: 10px;
@@ -68,6 +68,7 @@ console.log(address);*/
             top: -420px;
 
         }
+
         /*Picture Border*/
 
         .picture {
@@ -78,64 +79,75 @@ console.log(address);*/
             margin-left: 45px;
             top: -395px;
         }
+
         /*Name Box*/
-        .name{
-            position:relative;
-            margin-left:155px;
-            top:-530px;
+
+        .name {
+            position: relative;
+            margin-left: 155px;
+            top: -530px;
         }
+
         /*Birthdate Box*/
-        .birthdate{
-            position:relative;
-            margin-left:155px;
-            top:-520px;
+
+        .birthdate {
+            position: relative;
+            margin-left: 155px;
+            top: -520px;
         }
-           /*Age Box*/ 
-        .age{
-            position:relative;
-            margin-left:155px;
-            top:-510px;
+
+        /*Age Box*/
+
+        .age {
+            position: relative;
+            margin-left: 155px;
+            top: -510px;
         }
+
         /*Address Box*/
-        .address{
-            margin-left:155px;
-            position:relative;
-            top:-500px;
+
+        .address {
+            margin-left: 155px;
+            position: relative;
+            top: -500px;
         }
+
         /*Picture Box*/
-        .change-image{
-            position:absolute;
-            margin-left:47px;
-            top:70px;
+
+        .change-image {
+            position: absolute;
+            margin-left: 47px;
+            top: 70px;
         }
-        .barcode{
-            position:absolute;
-            top:300px;
-            left:50px;
+
+        .barcode {
+            position: absolute;
+            top: 300px;
+            left: 50px;
         }
     </style>
 </head>
 
 <body>
-    
+
     <div class="identification-card"></div>
     <div class="gap"></div>
     <div class="picture"></div>
-    <div class = "name">Name:</div><br>
-    <div class= "birthdate">Birthdate:</div><br>
-    <div class ="age">Age:</div><br>
+    <div class="name">Name:</div><br>
+    <div class="birthdate">Birthdate:</div><br>
+    <div class="age">Age:</div><br>
     <div class="address">Address</div><br>
-    
-    <img class="change-image" class="img" src="nopfp.png" alt="Blank Picture" style= width:100px;height:130px>
-    <img class =" barcode"  src='barcode.png' alt='barcode' style= width:250px;height:100px>
-    Name:<input id ='name' type="text" name ="Name" placeholder="(Last/First Name)"><br> 
-    Date of Birth:<input id="birthdate" type="date"></input><br>
-    Age:<input id="age" type= "number" min =18 max=150></input></br>
+
+    <img class="change-image" class="img" src="nopfp.png" alt="Blank Picture" style=w idth:100px;height:130px>
+    <img class=" barcode" src='barcode.png' alt='barcode' style=w idth:250px;height:100px> Name:
+    <input id='name' type="text" name="Name" placeholder="(Last/First Name)"><br> Date of Birth:<input id="birthdate" type="date"></input><br> Age:
+    <input id="age" type="number" min=18 max=150></input>
+    </br>
     Address:<input id="address" type="text"></input><br>
-<input id='background-color' type='text' placeholder='Background Color'></input><br>
-    <input id ="link" type= "text" placeholder= "(Insert Link to photo)"></input><br>
-    <input id="color" type ="text" placeholder="(Default color for ID)"></input><br>
+    <input id='background-color' type='text' placeholder='Background Color'></input><br>
+    <input id="link" type="text" placeholder="(Insert Link to photo)"></input><br>
+    <input id="color" type="text" placeholder="(Default color for ID)"></input><br>
     <button>Generate ID</button>
-  
+
 
 </html>
