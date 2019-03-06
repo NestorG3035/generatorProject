@@ -17,6 +17,7 @@ var age=$('#age').val();
 var address=$('#address').val();
 var colorUser=$('#color').val();
 var link=$('#link').val();
+var backgroundcolor=$('#background-color').val();
 /*console.log(link)*/
 /*All these commands below grab the element we spicify by their ID or Class and add the inputted information right next to it. EX:The name Class gets the variable called name that has the user's name.*/
   $('.name').html('Name: '+name);
@@ -26,6 +27,7 @@ var link=$('#link').val();
   $('.change-image').attr('src',link);
   
   $('div').css('color',colorUser);
+  $('.identification-card').css('background-color',backgroundcolor)
  
 
 
@@ -130,7 +132,7 @@ console.log(address);*/
     Date of Birth:<input id="birthdate" type="date"></input><br>
     Age:<input id="age" type= "number" min =18 max=150></input></br>
     Address:<input id="address" type="text"></input><br>
-
+<input id='background-color' type='text' placeholder='Background Color'></input><br>
     <input id ="link" type= "text" placeholder= "(Insert Link to photo)"></input><br>
     <input id="color" type ="text" placeholder="(Default color for ID)"></input><br>
     <button>Generate ID</button>
