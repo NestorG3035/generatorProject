@@ -19,14 +19,14 @@ var colorUser=$('#color').val();
 var link=$('#link').val();
 /*console.log(link)*/
 /*All these commands below grab the element we spicify by their ID or Class and add the inputted information right next to it. EX:The name Class gets the variable called name that has the user's name.*/
-  $('.name').html("Name: "+name);
-  $('.birthdate').html("Birthdate: "+ dob);
-  $('.age').html("Age: "+ age);
-  $('.address').html("Address: "+address);
-  $('#change-image').attr('src',link);
+  $('.name').html('Name: '+name);
+  $('.birthdate').html('Date of Birth: '+ dob);
+  $('.age').html('Age: '+age);
+  $('.address').html('Address: '+address);
+  $('.change-image').attr('src',link);
   
   $('div').css('color',colorUser);
-  
+ 
 
 
 /*Debuggin test incase variables didnt store the input*/
@@ -119,12 +119,13 @@ console.log(address);*/
     <div class="identification-card"></div>
     <div class="gap"></div>
     <div class="picture"></div>
-    <div class = "name"></div><br>
-    <div class= "birthdate"></div><br>
-    <div class ="age"></div><br>
-    <div class="address"></div><br>
-    <img class="change-image"class="img" src="nopfp.png" alt="Blank Picture" style= width:100px;height:130px>
-    <img class =" barcode"src='barcode.png' alt='barcode' style= width:250px;height:100px>
+    <div class = "name">Name:</div><br>
+    <div class= "birthdate">Birthdate:</div><br>
+    <div class ="age">Age:</div><br>
+    <div class="address">Address</div><br>
+    
+    <img class="change-image" class="img" src="nopfp.png" alt="Blank Picture" style= width:100px;height:130px>
+    <img class =" barcode"  src='barcode.png' alt='barcode' style= width:250px;height:100px>
     Name:<input id ='name' type="text" name ="Name" placeholder="(Last/First Name)"><br> 
     Date of Birth:<input id="birthdate" type="date"></input><br>
     Age:<input id="age" type= "number" min =18 max=150></input></br>
